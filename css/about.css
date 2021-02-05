@@ -1,0 +1,92 @@
+html {
+  min-height: 100%;
+  background-color: #001321;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  color: #ededed;
+}
+
+h1 {
+  font-size: 5rem;
+  font-weight: 800;
+  margin-top: 1rem;
+}
+
+h2 {
+  font-size: 3.2rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 2.5rem;
+}
+
+h4 {
+  font-size: 2rem;
+}
+
+h5 {
+  font-size: 1.5rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+a {
+  color: #e1e1e1;
+}
+a:hover {
+  color: #cdcdcd;
+}
+
+.text-center {
+  text-align: center;
+}
+.text-muted {
+  color: #e1e1e1;
+}
+
+main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#hello {
+  margin: 5rem 0;
+}
+
+#skills .bar, #project .bar {
+  background: #e1e1e1;
+  height: 8px;
+  width: 70px;
+  margin: 0 auto;
+}
+
+.project-container {
+  margin: 0 auto;
+  margin-top: 2rem;
+  width: fit-content;
+}
