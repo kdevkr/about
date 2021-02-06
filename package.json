@@ -1,0 +1,22 @@
+{
+  "name": "about",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build:scss": "sass src/scss:css",
+    "watch:scss": "sass --watch src/scss:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://kdevkr@github.com/kdevkr/about.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kdevkr/about/issues"
+  },
+  "homepage": "https://kdevkr.github.io/about",
+  "dependencies": {
+    "sass": "^1.32.6"
+  }
+}

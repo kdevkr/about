@@ -1,3 +1,968 @@
+@import "https://fonts.googleapis.com/css2?family=Roboto&display=swap";
+:root {
+  /* Change this to change the appearance of the hexaons */
+  --hex-width: 100px;
+  --hex-between: 10px;
+  /* Other hexagon dimentions */
+  --hex-height: calc(var(--hex-width) / 1.73 /* sqrt(3) */);
+  --hex-margin: calc(var(--hex-width) / 2);
+  --hex-border: calc(var(--hex-margin) / 1.73 /* sqrt(3) */);
+  --hex-transition: fill 0.2s linear;
+}
+
+/* Hexagons */
+.hexagon-container {
+  display: grid;
+  /* grid-template-columns: var(--hex-width) var(--hex-width) var(--hex-width) var(--hex-width); */
+  grid-template-columns: var(--hex-width) var(--hex-width) var(--hex-width) var(--hex-width) var(--hex-width) var(--hex-width);
+  grid-auto-rows: calc(var(--hex-width) - 28.87px / 2);
+  grid-gap: var(--hex-between) var(--hex-between);
+  padding-bottom: var(--hex-border);
+  justify-content: center;
+  margin-top: 1.5rem;
+  -webkit-transition: width 5s, height 5s, background-color 5s, -webkit-transform 5s;
+  transition: width 5s, height 2s, background-color 5s, transform 5s;
+}
+
+@media (max-width: 768px) {
+  .hexagon-container {
+    grid-template-columns: var(--hex-width) var(--hex-width) var(--hex-width) var(--hex-width);
+    margin-left: -50px;
+  }
+}
+.hexagon {
+  align-items: center;
+  /* background-color: var(--color-hex-default); */
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  fill: white;
+  height: var(--hex-height);
+  justify-content: center;
+  margin: var(--hex-border) 0;
+  position: relative;
+  transition: var(--hex-transition);
+  width: var(--hex-width);
+}
+.hexagon::after, .hexagon::before {
+  border-left: var(--hex-margin) solid transparent;
+  border-right: var(--hex-margin) solid transparent;
+  content: "";
+  left: 0;
+  position: absolute;
+  transition: var(--hex-transition);
+  width: 0;
+}
+.hexagon::after {
+  border-top: var(--hex-border) solid var(--color-hex-default);
+  top: 100%;
+  width: 0;
+}
+.hexagon::before {
+  border-bottom: var(--hex-border) solid var(--color-hex-default);
+  bottom: 100%;
+}
+.hexagon:hover {
+  background-color: var(--color-hex-hover);
+}
+.hexagon:hover::after, .hexagon:hover::before {
+  border-top-color: var(--color-hex-hover);
+  border-bottom-color: var(--color-hex-hover);
+}
+@media (min-width: 768px) {
+  .hexagon:nth-child(12n+7), .hexagon:nth-child(12n+8), .hexagon:nth-child(12n+9), .hexagon:nth-child(12n+10), .hexagon:nth-child(12n+11), .hexagon:nth-child(12n+12) {
+    margin-left: calc(var(--hex-width) / 2 + var(--hex-between) / 2);
+  }
+}
+@media (max-width: 768px) {
+  .hexagon:nth-child(8n+5), .hexagon:nth-child(8n+6), .hexagon:nth-child(8n+7), .hexagon:nth-child(8n+8) {
+    margin-left: calc(var(--hex-width) / 2 + var(--hex-between) / 2);
+  }
+}
+.hexagon > svg {
+  height: 75%;
+  transition: var(--hex-transition);
+}
+.hexagon > img {
+  height: 75%;
+  transition: var(--hex-transition);
+}
+
+/* Colors */
+:root {
+  --color-hex-default: #000000;
+  --color-hex-hover: #ffffff;
+  --color-java: #007396;
+  --color-atom: #66595c;
+  --color-bootstrap: #7952b3;
+  --color-css: #1572b6;
+  --color-git: #f34f29;
+  --color-github: #181717;
+  --color-javascript: #f0db4f;
+  --color-python: #3776ab;
+  --color-sass: #cc6699;
+  --color-postcss: #dd3a0a;
+  --color-vuejs: #4fc08d;
+  --color-webpack: #8dd6f9;
+  --color-docker: #2496ed;
+  --color-kubernetes: #326ce5;
+  --color-vscode: #007acc;
+  --color-spring: #6db33f;
+  --color-intellijidea: #fb2046;
+  --color-hexo: #0e83cd;
+  --color-go: #00add8;
+  --color-linux: #fcc624;
+  --color-alpinelinux: #0d597f;
+  --color-windows: #0078d6;
+  --color-postgres: #336791;
+  --color-sqlite: #003b57;
+  --color-elasticsearch: #005571;
+  --color-jenkins: #d33834;
+  --color-aws: #232f3e;
+  --color-ubuntu: #e95420;
+  --color-sonarqube: #4e9bcd;
+  --color-sonarlint: #cb2029;
+  --color-eslint: #4b32c3;
+  --color-prettier: #f7b93e;
+  --color-gradle: #02303a;
+}
+
+.color-java {
+  background-color: #007396;
+}
+.color-java::after, .color-java::before {
+  border-top-color: #007396;
+  border-bottom-color: #007396;
+}
+.color-java:hover {
+  fill: #007396;
+  animation-name: pulse;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+.color-java.learning {
+  opacity: 0.5;
+}
+.color-java.learning:hover {
+  background-color: #007396;
+  fill: white;
+}
+.color-java.learning:hover::after, .color-java.learning:hover::before {
+  border-top-color: #007396;
+  border-bottom-color: #007396;
+}
+
+.color-atom {
+  background-color: #66595c;
+}
+.color-atom::after, .color-atom::before {
+  border-top-color: #66595c;
+  border-bottom-color: #66595c;
+}
+.color-atom:hover {
+  fill: #66595c;
+  animation-name: pulse;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+.color-atom.learning {
+  opacity: 0.5;
+}
+.color-atom.learning:hover {
+  background-color: #66595c;
+  fill: white;
+}
+.color-atom.learning:hover::after, .color-atom.learning:hover::before {
+  border-top-color: #66595c;
+  border-bottom-color: #66595c;
+}
+
+.color-bootstrap {
+  background-color: #7952b3;
+}
+.color-bootstrap::after, .color-bootstrap::before {
+  border-top-color: #7952b3;
+  border-bottom-color: #7952b3;
+}
+.color-bootstrap:hover {
+  fill: #7952b3;
+  animation-name: pulse;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+.color-bootstrap.learning {
+  opacity: 0.5;
+}
+.color-bootstrap.learning:hover {
+  background-color: #7952b3;
+  fill: white;
+}
+.color-bootstrap.learning:hover::after, .color-bootstrap.learning:hover::before {
+  border-top-color: #7952b3;
+  border-bottom-color: #7952b3;
+}
+
+.color-css {
+  background-color: #1572b6;
+}
+.color-css::after, .color-css::before {
+  border-top-color: #1572b6;
+  border-bottom-color: #1572b6;
+}
+.color-css:hover {
+  fill: #1572b6;
+  animation-name: pulse;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+.color-css.learning {
+  opacity: 0.5;
+}
+.color-css.learning:hover {
+  background-color: #1572b6;
+  fill: white;
+}
+.color-css.learning:hover::after, .color-css.learning:hover::before {
+  border-top-color: #1572b6;
+  border-bottom-color: #1572b6;
+}
+
+.color-git {
+  background-color: #f34f29;
+}
+.color-git::after, .color-git::before {
+  border-top-color: #f34f29;
+  border-bottom-color: #f34f29;
+}
+.color-git:hover {
+  fill: #f34f29;
+  animation-name: pulse;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+.color-git.learning {
+  opacity: 0.5;
+}
+.color-git.learning:hover {
+  background-color: #f34f29;
+  fill: white;
+}
+.color-git.learning:hover::after, .color-git.learning:hover::before {
+  border-top-color: #f34f29;
+  border-bottom-color: #f34f29;
+}
+
+.color-github {
+  background-color: #181717;
+}
+.color-github::after, .color-github::before {
+  border-top-color: #181717;
+  border-bottom-color: #181717;
+}
+.color-github:hover {
+  fill: #181717;
+  animation-name: pulse;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+.color-github.learning {
+  opacity: 0.5;
+}
+.color-github.learning:hover {
+  background-color: #181717;
+  fill: white;
+}
+.color-github.learning:hover::after, .color-github.learning:hover::before {
+  border-top-color: #181717;
+  border-bottom-color: #181717;
+}
+
+.color-javascript {
+  background-color: #f0db4f;
+}
+.color-javascript::after, .color-javascript::before {
+  border-top-color: #f0db4f;
+  border-bottom-color: #f0db4f;
+}
+.color-javascript:hover {
+  fill: #f0db4f;
+  animation-name: pulse;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+.color-javascript.learning {
+  opacity: 0.5;
+}
+.color-javascript.learning:hover {
+  background-color: #f0db4f;
+  fill: white;
+}
+.color-javascript.learning:hover::after, .color-javascript.learning:hover::before {
+  border-top-color: #f0db4f;
+  border-bottom-color: #f0db4f;
+}
+
+.color-python {
+  background-color: #3776ab;
+}
+.color-python::after, .color-python::before {
+  border-top-color: #3776ab;
+  border-bottom-color: #3776ab;
+}
+.color-python:hover {
+  fill: #3776ab;
+  animation-name: pulse;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+.color-python.learning {
+  opacity: 0.5;
+}
+.color-python.learning:hover {
+  background-color: #3776ab;
+  fill: white;
+}
+.color-python.learning:hover::after, .color-python.learning:hover::before {
+  border-top-color: #3776ab;
+  border-bottom-color: #3776ab;
+}
+
+.color-sass {
+  background-color: #cc6699;
+}
+.color-sass::after, .color-sass::before {
+  border-top-color: #cc6699;
+  border-bottom-color: #cc6699;
+}
+.color-sass:hover {
+  fill: #cc6699;
+  animation-name: pulse;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+.color-sass.learning {
+  opacity: 0.5;
+}
+.color-sass.learning:hover {
+  background-color: #cc6699;
+  fill: white;
+}
+.color-sass.learning:hover::after, .color-sass.learning:hover::before {
+  border-top-color: #cc6699;
+  border-bottom-color: #cc6699;
+}
+
+.color-postcss {
+  background-color: #dd3a0a;
+}
+.color-postcss::after, .color-postcss::before {
+  border-top-color: #dd3a0a;
+  border-bottom-color: #dd3a0a;
+}
+.color-postcss:hover {
+  fill: #dd3a0a;
+  animation-name: pulse;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+.color-postcss.learning {
+  opacity: 0.5;
+}
+.color-postcss.learning:hover {
+  background-color: #dd3a0a;
+  fill: white;
+}
+.color-postcss.learning:hover::after, .color-postcss.learning:hover::before {
+  border-top-color: #dd3a0a;
+  border-bottom-color: #dd3a0a;
+}
+
+.color-vuejs {
+  background-color: #4fc08d;
+}
+.color-vuejs::after, .color-vuejs::before {
+  border-top-color: #4fc08d;
+  border-bottom-color: #4fc08d;
+}
+.color-vuejs:hover {
+  fill: #4fc08d;
+  animation-name: pulse;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+.color-vuejs.learning {
+  opacity: 0.5;
+}
+.color-vuejs.learning:hover {
+  background-color: #4fc08d;
+  fill: white;
+}
+.color-vuejs.learning:hover::after, .color-vuejs.learning:hover::before {
+  border-top-color: #4fc08d;
+  border-bottom-color: #4fc08d;
+}
+
+.color-webpack {
+  background-color: #8dd6f9;
+}
+.color-webpack::after, .color-webpack::before {
+  border-top-color: #8dd6f9;
+  border-bottom-color: #8dd6f9;
+}
+.color-webpack:hover {
+  fill: #8dd6f9;
+  animation-name: pulse;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+.color-webpack.learning {
+  opacity: 0.5;
+}
+.color-webpack.learning:hover {
+  background-color: #8dd6f9;
+  fill: white;
+}
+.color-webpack.learning:hover::after, .color-webpack.learning:hover::before {
+  border-top-color: #8dd6f9;
+  border-bottom-color: #8dd6f9;
+}
+
+.color-docker {
+  background-color: #2496ed;
+}
+.color-docker::after, .color-docker::before {
+  border-top-color: #2496ed;
+  border-bottom-color: #2496ed;
+}
+.color-docker:hover {
+  fill: #2496ed;
+  animation-name: pulse;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+.color-docker.learning {
+  opacity: 0.5;
+}
+.color-docker.learning:hover {
+  background-color: #2496ed;
+  fill: white;
+}
+.color-docker.learning:hover::after, .color-docker.learning:hover::before {
+  border-top-color: #2496ed;
+  border-bottom-color: #2496ed;
+}
+
+.color-kubernetes {
+  background-color: #326ce5;
+}
+.color-kubernetes::after, .color-kubernetes::before {
+  border-top-color: #326ce5;
+  border-bottom-color: #326ce5;
+}
+.color-kubernetes:hover {
+  fill: #326ce5;
+  animation-name: pulse;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+.color-kubernetes.learning {
+  opacity: 0.5;
+}
+.color-kubernetes.learning:hover {
+  background-color: #326ce5;
+  fill: white;
+}
+.color-kubernetes.learning:hover::after, .color-kubernetes.learning:hover::before {
+  border-top-color: #326ce5;
+  border-bottom-color: #326ce5;
+}
+
+.color-vscode {
+  background-color: #007acc;
+}
+.color-vscode::after, .color-vscode::before {
+  border-top-color: #007acc;
+  border-bottom-color: #007acc;
+}
+.color-vscode:hover {
+  fill: #007acc;
+  animation-name: pulse;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+.color-vscode.learning {
+  opacity: 0.5;
+}
+.color-vscode.learning:hover {
+  background-color: #007acc;
+  fill: white;
+}
+.color-vscode.learning:hover::after, .color-vscode.learning:hover::before {
+  border-top-color: #007acc;
+  border-bottom-color: #007acc;
+}
+
+.color-spring {
+  background-color: #6db33f;
+}
+.color-spring::after, .color-spring::before {
+  border-top-color: #6db33f;
+  border-bottom-color: #6db33f;
+}
+.color-spring:hover {
+  fill: #6db33f;
+  animation-name: pulse;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+.color-spring.learning {
+  opacity: 0.5;
+}
+.color-spring.learning:hover {
+  background-color: #6db33f;
+  fill: white;
+}
+.color-spring.learning:hover::after, .color-spring.learning:hover::before {
+  border-top-color: #6db33f;
+  border-bottom-color: #6db33f;
+}
+
+.color-intellijidea {
+  background-color: #fb2046;
+}
+.color-intellijidea::after, .color-intellijidea::before {
+  border-top-color: #fb2046;
+  border-bottom-color: #fb2046;
+}
+.color-intellijidea:hover {
+  fill: #fb2046;
+  animation-name: pulse;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+.color-intellijidea.learning {
+  opacity: 0.5;
+}
+.color-intellijidea.learning:hover {
+  background-color: #fb2046;
+  fill: white;
+}
+.color-intellijidea.learning:hover::after, .color-intellijidea.learning:hover::before {
+  border-top-color: #fb2046;
+  border-bottom-color: #fb2046;
+}
+
+.color-hexo {
+  background-color: #0e83cd;
+}
+.color-hexo::after, .color-hexo::before {
+  border-top-color: #0e83cd;
+  border-bottom-color: #0e83cd;
+}
+.color-hexo:hover {
+  fill: #0e83cd;
+  animation-name: pulse;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+.color-hexo.learning {
+  opacity: 0.5;
+}
+.color-hexo.learning:hover {
+  background-color: #0e83cd;
+  fill: white;
+}
+.color-hexo.learning:hover::after, .color-hexo.learning:hover::before {
+  border-top-color: #0e83cd;
+  border-bottom-color: #0e83cd;
+}
+
+.color-go {
+  background-color: #00add8;
+}
+.color-go::after, .color-go::before {
+  border-top-color: #00add8;
+  border-bottom-color: #00add8;
+}
+.color-go:hover {
+  fill: #00add8;
+  animation-name: pulse;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+.color-go.learning {
+  opacity: 0.5;
+}
+.color-go.learning:hover {
+  background-color: #00add8;
+  fill: white;
+}
+.color-go.learning:hover::after, .color-go.learning:hover::before {
+  border-top-color: #00add8;
+  border-bottom-color: #00add8;
+}
+
+.color-linux {
+  background-color: #fcc624;
+}
+.color-linux::after, .color-linux::before {
+  border-top-color: #fcc624;
+  border-bottom-color: #fcc624;
+}
+.color-linux:hover {
+  fill: #fcc624;
+  animation-name: pulse;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+.color-linux.learning {
+  opacity: 0.5;
+}
+.color-linux.learning:hover {
+  background-color: #fcc624;
+  fill: white;
+}
+.color-linux.learning:hover::after, .color-linux.learning:hover::before {
+  border-top-color: #fcc624;
+  border-bottom-color: #fcc624;
+}
+
+.color-alpinelinux {
+  background-color: #0d597f;
+}
+.color-alpinelinux::after, .color-alpinelinux::before {
+  border-top-color: #0d597f;
+  border-bottom-color: #0d597f;
+}
+.color-alpinelinux:hover {
+  fill: #0d597f;
+  animation-name: pulse;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+.color-alpinelinux.learning {
+  opacity: 0.5;
+}
+.color-alpinelinux.learning:hover {
+  background-color: #0d597f;
+  fill: white;
+}
+.color-alpinelinux.learning:hover::after, .color-alpinelinux.learning:hover::before {
+  border-top-color: #0d597f;
+  border-bottom-color: #0d597f;
+}
+
+.color-windows {
+  background-color: #0078d6;
+}
+.color-windows::after, .color-windows::before {
+  border-top-color: #0078d6;
+  border-bottom-color: #0078d6;
+}
+.color-windows:hover {
+  fill: #0078d6;
+  animation-name: pulse;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+.color-windows.learning {
+  opacity: 0.5;
+}
+.color-windows.learning:hover {
+  background-color: #0078d6;
+  fill: white;
+}
+.color-windows.learning:hover::after, .color-windows.learning:hover::before {
+  border-top-color: #0078d6;
+  border-bottom-color: #0078d6;
+}
+
+.color-postgres {
+  background-color: #336791;
+}
+.color-postgres::after, .color-postgres::before {
+  border-top-color: #336791;
+  border-bottom-color: #336791;
+}
+.color-postgres:hover {
+  fill: #336791;
+  animation-name: pulse;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+.color-postgres.learning {
+  opacity: 0.5;
+}
+.color-postgres.learning:hover {
+  background-color: #336791;
+  fill: white;
+}
+.color-postgres.learning:hover::after, .color-postgres.learning:hover::before {
+  border-top-color: #336791;
+  border-bottom-color: #336791;
+}
+
+.color-sqlite {
+  background-color: #003b57;
+}
+.color-sqlite::after, .color-sqlite::before {
+  border-top-color: #003b57;
+  border-bottom-color: #003b57;
+}
+.color-sqlite:hover {
+  fill: #003b57;
+  animation-name: pulse;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+.color-sqlite.learning {
+  opacity: 0.5;
+}
+.color-sqlite.learning:hover {
+  background-color: #003b57;
+  fill: white;
+}
+.color-sqlite.learning:hover::after, .color-sqlite.learning:hover::before {
+  border-top-color: #003b57;
+  border-bottom-color: #003b57;
+}
+
+.color-elasticsearch {
+  background-color: #005571;
+}
+.color-elasticsearch::after, .color-elasticsearch::before {
+  border-top-color: #005571;
+  border-bottom-color: #005571;
+}
+.color-elasticsearch:hover {
+  fill: #005571;
+  animation-name: pulse;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+.color-elasticsearch.learning {
+  opacity: 0.5;
+}
+.color-elasticsearch.learning:hover {
+  background-color: #005571;
+  fill: white;
+}
+.color-elasticsearch.learning:hover::after, .color-elasticsearch.learning:hover::before {
+  border-top-color: #005571;
+  border-bottom-color: #005571;
+}
+
+.color-jenkins {
+  background-color: #d33834;
+}
+.color-jenkins::after, .color-jenkins::before {
+  border-top-color: #d33834;
+  border-bottom-color: #d33834;
+}
+.color-jenkins:hover {
+  fill: #d33834;
+  animation-name: pulse;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+.color-jenkins.learning {
+  opacity: 0.5;
+}
+.color-jenkins.learning:hover {
+  background-color: #d33834;
+  fill: white;
+}
+.color-jenkins.learning:hover::after, .color-jenkins.learning:hover::before {
+  border-top-color: #d33834;
+  border-bottom-color: #d33834;
+}
+
+.color-aws {
+  background-color: #232f3e;
+}
+.color-aws::after, .color-aws::before {
+  border-top-color: #232f3e;
+  border-bottom-color: #232f3e;
+}
+.color-aws:hover {
+  fill: #232f3e;
+  animation-name: pulse;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+.color-aws.learning {
+  opacity: 0.5;
+}
+.color-aws.learning:hover {
+  background-color: #232f3e;
+  fill: white;
+}
+.color-aws.learning:hover::after, .color-aws.learning:hover::before {
+  border-top-color: #232f3e;
+  border-bottom-color: #232f3e;
+}
+
+.color-ubuntu {
+  background-color: #e95420;
+}
+.color-ubuntu::after, .color-ubuntu::before {
+  border-top-color: #e95420;
+  border-bottom-color: #e95420;
+}
+.color-ubuntu:hover {
+  fill: #e95420;
+  animation-name: pulse;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+.color-ubuntu.learning {
+  opacity: 0.5;
+}
+.color-ubuntu.learning:hover {
+  background-color: #e95420;
+  fill: white;
+}
+.color-ubuntu.learning:hover::after, .color-ubuntu.learning:hover::before {
+  border-top-color: #e95420;
+  border-bottom-color: #e95420;
+}
+
+.color-sonarqube {
+  background-color: #4e9bcd;
+}
+.color-sonarqube::after, .color-sonarqube::before {
+  border-top-color: #4e9bcd;
+  border-bottom-color: #4e9bcd;
+}
+.color-sonarqube:hover {
+  fill: #4e9bcd;
+  animation-name: pulse;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+.color-sonarqube.learning {
+  opacity: 0.5;
+}
+.color-sonarqube.learning:hover {
+  background-color: #4e9bcd;
+  fill: white;
+}
+.color-sonarqube.learning:hover::after, .color-sonarqube.learning:hover::before {
+  border-top-color: #4e9bcd;
+  border-bottom-color: #4e9bcd;
+}
+
+.color-sonarlint {
+  background-color: #cb2029;
+}
+.color-sonarlint::after, .color-sonarlint::before {
+  border-top-color: #cb2029;
+  border-bottom-color: #cb2029;
+}
+.color-sonarlint:hover {
+  fill: #cb2029;
+  animation-name: pulse;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+.color-sonarlint.learning {
+  opacity: 0.5;
+}
+.color-sonarlint.learning:hover {
+  background-color: #cb2029;
+  fill: white;
+}
+.color-sonarlint.learning:hover::after, .color-sonarlint.learning:hover::before {
+  border-top-color: #cb2029;
+  border-bottom-color: #cb2029;
+}
+
+.color-eslint {
+  background-color: #4b32c3;
+}
+.color-eslint::after, .color-eslint::before {
+  border-top-color: #4b32c3;
+  border-bottom-color: #4b32c3;
+}
+.color-eslint:hover {
+  fill: #4b32c3;
+  animation-name: pulse;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+.color-eslint.learning {
+  opacity: 0.5;
+}
+.color-eslint.learning:hover {
+  background-color: #4b32c3;
+  fill: white;
+}
+.color-eslint.learning:hover::after, .color-eslint.learning:hover::before {
+  border-top-color: #4b32c3;
+  border-bottom-color: #4b32c3;
+}
+
+.color-prettier {
+  background-color: #f7b93e;
+}
+.color-prettier::after, .color-prettier::before {
+  border-top-color: #f7b93e;
+  border-bottom-color: #f7b93e;
+}
+.color-prettier:hover {
+  fill: #f7b93e;
+  animation-name: pulse;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+.color-prettier.learning {
+  opacity: 0.5;
+}
+.color-prettier.learning:hover {
+  background-color: #f7b93e;
+  fill: white;
+}
+.color-prettier.learning:hover::after, .color-prettier.learning:hover::before {
+  border-top-color: #f7b93e;
+  border-bottom-color: #f7b93e;
+}
+
+.color-gradle {
+  background-color: #02303a;
+}
+.color-gradle::after, .color-gradle::before {
+  border-top-color: #02303a;
+  border-bottom-color: #02303a;
+}
+.color-gradle:hover {
+  fill: #02303a;
+  animation-name: pulse;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+.color-gradle.learning {
+  opacity: 0.5;
+}
+.color-gradle.learning:hover {
+  background-color: #02303a;
+  fill: white;
+}
+.color-gradle.learning:hover::after, .color-gradle.learning:hover::before {
+  border-top-color: #02303a;
+  border-bottom-color: #02303a;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  to {
+    transform: scale(1);
+  }
+}
 html {
   min-height: 100%;
   background-color: #001321;
@@ -55,6 +1020,7 @@ p {
 a {
   color: #e1e1e1;
 }
+
 a:hover {
   color: #cdcdcd;
 }
@@ -62,6 +1028,7 @@ a:hover {
 .text-center {
   text-align: center;
 }
+
 .text-muted {
   color: #e1e1e1;
 }
@@ -90,3 +1057,9 @@ main {
   margin-top: 2rem;
   width: fit-content;
 }
+
+.h-100 {
+  height: 100% !important;
+}
+
+/*# sourceMappingURL=about.css.map */
