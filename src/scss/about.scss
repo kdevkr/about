@@ -1,9 +1,15 @@
 @import "./hexagon";
 @import "./font";
 
+$body-color: #001321;
+
+:root {
+  --body-color: $body-color;
+}
+
 html {
   min-height: 100%;
-  background-color: #001321;
+  background-color: $body-color;
 }
 
 body {

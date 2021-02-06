@@ -963,6 +963,10 @@
     transform: scale(1);
   }
 }
+:root {
+  --body-color: $body-color;
+}
+
 html {
   min-height: 100%;
   background-color: #001321;
