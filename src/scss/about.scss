@@ -1,7 +1,8 @@
+@import "./variables";
+@import "./mixin";
 @import "./hexagon";
 @import "./font";
 
-$body-color: #001321;
 
 :root {
   --body-color: $body-color;
@@ -25,23 +26,43 @@ h1 {
   font-size: 5rem;
   font-weight: 800;
   margin-top: 1rem;
+
+  @include mobile {
+    font-size: 3rem;
+  }
 }
 
 h2 {
   font-size: 3.2rem;
   font-weight: 600;
+
+  @include mobile {
+    font-size: 1.8rem;
+  }
 }
 
 h3 {
   font-size: 2.5rem;
+
+  @include mobile {
+    font-size: 1.6rem;
+  }
 }
 
 h4 {
   font-size: 2rem;
+
+  @include mobile {
+    font-size: 1.4rem;
+  }
 }
 
 h5 {
   font-size: 1.5rem;
+
+  @include mobile {
+    font-size: 1.3rem;
+  }
 }
 
 h6 {
@@ -85,9 +106,20 @@ main {
 
 #hello {
   margin: 5rem 0;
+
+  @include mobile {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 #skills, #project {
+
+  @include mobile {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
   .bar {
     background: #e1e1e1;
     height: 8px;
@@ -104,4 +136,11 @@ main {
 
 .h-100 {
   height: 100% !important;
+}
+
+@include mobile {
+  :root {
+    --hex-width: 50px;
+    --hex-between: 10px;
+  }
 }

@@ -32,10 +32,9 @@
 
 @media (max-width: 768px) {
   .hexagon-container {
-    grid-template-columns: var(--hex-width) var(--hex-width) var(--hex-width) var(
-        --hex-width
-      );
-    margin-left: -50px;
+    grid-template-columns: var(--hex-width) var(--hex-width) var(--hex-width) var(--hex-width);
+    grid-auto-rows: calc(var(--hex-width) - 22.87px / 2);
+    margin-left: -28px;
   }
 }
 
