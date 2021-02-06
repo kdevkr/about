@@ -72,8 +72,9 @@
       </style>
       <div id="hello" class="text-center">
         <h1>Hello. I'm Mambo.</h1>
-        <h6 class="text-muted">
-          The <strong>Mambo</strong> is based on Pokemon's Snorlax character.
+        <h6 class="text-muted" style="margin-top: 1rem;">
+          <span class="typer" id="typer" data-words="The Mambo is based on Pokemon's Snorlax character." data-colors="#e1e1e1" data-loop="false"></span>
+          <span class="cursor" data-owner="typer"></span>
         </h6>
         <p>
           <a target="_blank" href="https://github.com/kdevkr">Github</a> &
@@ -549,5 +550,7 @@
         </div>
       </div>
     </main>
+
+    <script async src="https://unpkg.com/typer-dot-js@0.1.0/typer.js"></script>
   </body>
 </html>
