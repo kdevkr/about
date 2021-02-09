@@ -36,6 +36,9 @@
     grid-auto-rows: calc(var(--hex-width) - 22.87px / 2);
     margin-left: -28px;
   }
+  .hexagon {
+    -webkit-tap-highlight-color:  transparent; 
+  }
 }
 
 .hexagon {

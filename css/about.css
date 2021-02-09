@@ -30,6 +30,10 @@
     grid-auto-rows: calc(var(--hex-width) - 22.87px / 2);
     margin-left: -28px;
   }
+
+  .hexagon {
+    -webkit-tap-highlight-color: transparent;
+  }
 }
 .hexagon {
   align-items: center;
@@ -964,6 +968,12 @@
     transform: scale(1);
   }
 }
+@font-face {
+  font-family: "HangeulNuri-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_three@1.0/HangeulNuri-Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 :root {
   --body-color: $body-color;
 }
@@ -981,6 +991,11 @@ body {
   margin: 0;
   color: #ededed;
 }
+@media (max-width: 757px) {
+  body {
+    font-family: "HangeulNuri-Bold", sans-serif;
+  }
+}
 
 h1 {
   font-size: 5rem;
@@ -989,7 +1004,7 @@ h1 {
 }
 @media (max-width: 757px) {
   h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 }
 
