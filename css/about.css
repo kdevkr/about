@@ -103,6 +103,7 @@
   --color-css: #1572b6;
   --color-git: #f34f29;
   --color-github: #181717;
+  --color-githubaction: #2088FF;
   --color-javascript: #f0db4f;
   --color-python: #3776ab;
   --color-sass: #cc6699;
@@ -122,6 +123,7 @@
   --color-postgres: #336791;
   --color-sqlite: #003b57;
   --color-elasticsearch: #005571;
+  --color-redis: #DC382D;
   --color-jenkins: #d33834;
   --color-aws: #232f3e;
   --color-ubuntu: #e95420;
@@ -130,6 +132,7 @@
   --color-eslint: #4b32c3;
   --color-prettier: #f7b93e;
   --color-gradle: #02303a;
+  --color-mosquitto: #3C5280;
 }
 
 .color-java {
@@ -280,6 +283,31 @@
 .color-github.learning:hover::after, .color-github.learning:hover::before {
   border-top-color: #181717;
   border-bottom-color: #181717;
+}
+
+.color-githubaction {
+  background-color: #2088FF;
+}
+.color-githubaction::after, .color-githubaction::before {
+  border-top-color: #2088FF;
+  border-bottom-color: #2088FF;
+}
+.color-githubaction:hover {
+  fill: #2088FF;
+  animation-name: pulse;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+.color-githubaction.learning {
+  opacity: 0.5;
+}
+.color-githubaction.learning:hover {
+  background-color: #2088FF;
+  fill: white;
+}
+.color-githubaction.learning:hover::after, .color-githubaction.learning:hover::before {
+  border-top-color: #2088FF;
+  border-bottom-color: #2088FF;
 }
 
 .color-javascript {
@@ -757,6 +785,31 @@
   border-bottom-color: #005571;
 }
 
+.color-redis {
+  background-color: #DC382D;
+}
+.color-redis::after, .color-redis::before {
+  border-top-color: #DC382D;
+  border-bottom-color: #DC382D;
+}
+.color-redis:hover {
+  fill: #DC382D;
+  animation-name: pulse;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+.color-redis.learning {
+  opacity: 0.5;
+}
+.color-redis.learning:hover {
+  background-color: #DC382D;
+  fill: white;
+}
+.color-redis.learning:hover::after, .color-redis.learning:hover::before {
+  border-top-color: #DC382D;
+  border-bottom-color: #DC382D;
+}
+
 .color-jenkins {
   background-color: #d33834;
 }
@@ -955,6 +1008,31 @@
 .color-gradle.learning:hover::after, .color-gradle.learning:hover::before {
   border-top-color: #02303a;
   border-bottom-color: #02303a;
+}
+
+.color-mosquitto {
+  background-color: #3C5280;
+}
+.color-mosquitto::after, .color-mosquitto::before {
+  border-top-color: #3C5280;
+  border-bottom-color: #3C5280;
+}
+.color-mosquitto:hover {
+  fill: #3C5280;
+  animation-name: pulse;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+.color-mosquitto.learning {
+  opacity: 0.5;
+}
+.color-mosquitto.learning:hover {
+  background-color: #3C5280;
+  fill: white;
+}
+.color-mosquitto.learning:hover::after, .color-mosquitto.learning:hover::before {
+  border-top-color: #3C5280;
+  border-bottom-color: #3C5280;
 }
 
 @keyframes pulse {
