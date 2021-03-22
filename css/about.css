@@ -133,6 +133,8 @@
   --color-prettier: #f7b93e;
   --color-gradle: #02303a;
   --color-mosquitto: #3C5280;
+  --color-prometheus: #E6522C;
+  --color-grafana: #F46800;
 }
 
 .color-java {
@@ -1033,6 +1035,56 @@
 .color-mosquitto.learning:hover::after, .color-mosquitto.learning:hover::before {
   border-top-color: #3C5280;
   border-bottom-color: #3C5280;
+}
+
+.color-prometheus {
+  background-color: #E6522C;
+}
+.color-prometheus::after, .color-prometheus::before {
+  border-top-color: #E6522C;
+  border-bottom-color: #E6522C;
+}
+.color-prometheus:hover {
+  fill: #E6522C;
+  animation-name: pulse;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+.color-prometheus.learning {
+  opacity: 0.5;
+}
+.color-prometheus.learning:hover {
+  background-color: #E6522C;
+  fill: white;
+}
+.color-prometheus.learning:hover::after, .color-prometheus.learning:hover::before {
+  border-top-color: #E6522C;
+  border-bottom-color: #E6522C;
+}
+
+.color-grafana {
+  background-color: #F46800;
+}
+.color-grafana::after, .color-grafana::before {
+  border-top-color: #F46800;
+  border-bottom-color: #F46800;
+}
+.color-grafana:hover {
+  fill: #F46800;
+  animation-name: pulse;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+.color-grafana.learning {
+  opacity: 0.5;
+}
+.color-grafana.learning:hover {
+  background-color: #F46800;
+  fill: white;
+}
+.color-grafana.learning:hover::after, .color-grafana.learning:hover::before {
+  border-top-color: #F46800;
+  border-bottom-color: #F46800;
 }
 
 @keyframes pulse {
