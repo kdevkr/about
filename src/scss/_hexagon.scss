@@ -37,7 +37,7 @@
     margin-left: -28px;
   }
   .hexagon {
-    -webkit-tap-highlight-color:  transparent; 
+    -webkit-tap-highlight-color:  transparent;
   }
 }
 
@@ -132,9 +132,11 @@ $colors: (
   vuejs: #4fc08d,
   webpack: #8dd6f9,
   docker: #2496ed,
+  harbor: #60B932,
   kubernetes: #326ce5,
   vscode: #007acc,
   spring: #6db33f,
+  springboot: #6DB33F,
   intellijidea: #fb2046,
   hexo: #0e83cd,
   go: #00add8,
@@ -155,7 +157,14 @@ $colors: (
   gradle: #02303a,
   mosquitto: #3C5280,
   prometheus: #E6522C,
-  grafana: #F46800
+  grafana: #F46800,
+  kafka: #231F20,
+  rabbitmq: #ff6600,
+  timescale: #FDB515,
+  uptimekuma: #5CDD8B,
+  k6: #7D64FF,
+  sublimetext: #FF9800,
+  nginx: #009639
 );
 
 :root {

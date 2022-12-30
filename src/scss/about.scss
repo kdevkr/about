@@ -117,7 +117,7 @@ main {
   }
 }
 
-#skills, #project {
+#experience, #skills, #project {
 
   @include mobile {
     padding-left: 15px;
@@ -132,7 +132,7 @@ main {
   }
 }
 
-.project-container {
+.experience-container, .project-container {
   margin: 0 auto;
   margin-top: 2rem;
   width: fit-content;
