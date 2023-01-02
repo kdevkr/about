@@ -1,22 +1,31 @@
 {
-  "name": "about",
-  "version": "1.0.0",
-  "description": "",
-  "scripts": {
-    "build:scss": "sass src/scss:css",
-    "watch:scss": "sass --watch src/scss:css"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://kdevkr@github.com/kdevkr/about.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/kdevkr/about/issues"
-  },
-  "homepage": "https://kdevkr.github.io/about",
-  "dependencies": {
-    "sass": "^1.32.6"
-  }
+    "name": "about",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+        "build:scss": "sass src/scss:css",
+        "watch:scss": "sass --watch src/scss:css",
+        "about:dev": "vitepress dev about",
+        "about:build": "vitepress build about",
+        "about:preview": "vitepress preview about"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://kdevkr@github.com/kdevkr/about.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/kdevkr/about/issues"
+    },
+    "homepage": "https://kdevkr.github.io/about",
+    "dependencies": {
+        "reset-css": "^5.0.1",
+        "typer-js": "^5.5.3"
+    },
+    "devDependencies": {
+        "sass": "^1.57.1",
+        "vitepress": "^1.0.0-alpha.34",
+        "vue": "^3.2.45"
+    }
 }
