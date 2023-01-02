@@ -3,8 +3,6 @@
     "version": "1.0.0",
     "description": "",
     "scripts": {
-        "build:scss": "sass src/scss:css",
-        "watch:scss": "sass --watch src/scss:css",
         "about:dev": "vitepress dev about",
         "about:build": "vitepress build about",
         "about:preview": "vitepress preview about"
