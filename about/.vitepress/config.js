@@ -4,6 +4,7 @@ export default {
     description: "Just playing around.",
     appearance: true,
     base: "/about/",
+    lastUpdated: true,
     head: [
         [
             "link",
@@ -43,7 +44,6 @@ export default {
                 items: [
                     { text: "Introduction", link: "/" },
                     { text: "Experience", link: "/experience" },
-                    { text: "Project", link: "/project" },
                     { text: "Skills", link: "/skills" },
                 ],
             },
