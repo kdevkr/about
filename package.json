@@ -18,12 +18,14 @@
     },
     "homepage": "https://kdevkr.github.io/about",
     "dependencies": {
+        "dayjs": "^1.11.8",
         "reset-css": "^5.0.1",
         "typer-js": "^5.5.3"
     },
     "devDependencies": {
-        "sass": "^1.57.1",
-        "vitepress": "^1.0.0-alpha.34",
-        "vue": "^3.2.45"
+        "postcss": "^8.4.24",
+        "sass": "^1.62.1",
+        "vitepress": "^1.0.0-beta.1",
+        "vue": "3"
     }
 }
