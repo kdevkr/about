@@ -52,11 +52,11 @@ export default {
         logo: "./favicon/favicon.ico",
         sidebar: [
             {
-                text: "Resume",
                 items: [
                     { text: "Introduction", link: "/" },
                     { text: "Experience", link: "/experience" },
                     { text: "Skills", link: "/skills" },
+                    { text: "Troubleshooting", link: "/troubleshooting" },
                 ],
             },
         ],
