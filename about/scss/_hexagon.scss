@@ -144,7 +144,7 @@ $colors: (
   linux: #fcc624,
   alpinelinux: #0d597f,
   windows: #0078d6,
-  postgres: #336791,
+  postgres: #4169E1,
   sqlite: #003b57,
   elasticsearch: #005571,
   redis: #DC382D,
@@ -165,7 +165,8 @@ $colors: (
   uptimekuma: #5CDD8B,
   k6: #7D64FF,
   sublimetext: #FF9800,
-  nginx: #009639
+  nginx: #009639,
+  sentry: #362D59
 );
 
 :root {
