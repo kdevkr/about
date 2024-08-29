@@ -41,6 +41,6 @@ const diffMonths = dayjs().diff('2017-04-01', 'month') % 12
 
 ### 연락처
 
-- Github : [github.com/kdevkr](https://github.com/kdevkr)
-- Blog : [kdevkr.github.io](https://kdevkr.github.io/)
-- Email : kdevkr@gmail.com
+- 깃허브 : [github.com/kdevkr](https://github.com/kdevkr)
+- 이메일 : <a href="mailto:kdevkr@gmail.com">kdevkr@gmail.com</a>
+- 전화번호 : 010-4617-3992
