@@ -65,4 +65,14 @@ export default {
                 'Copyright © 2023 <a href="https://github.com/kdevkr">Mambo<a/>',
         },
     },
+
+    vite: {
+        css: {
+            preprocessorOptions: {
+                scss: {
+                    api: "modern-compiler",
+                },
+            },
+        },
+    },
 };
