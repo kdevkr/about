@@ -4,6 +4,7 @@ layout: home
 ---
 
 <script setup>
+import Comment from './components/Comment.vue'
 import dayjs from 'dayjs'
 const diffYears = dayjs().diff('2017-04-01', 'year')
 const diffMonths = dayjs().diff('2017-04-01', 'month') % 12
@@ -53,3 +54,5 @@ const diffMonths = dayjs().diff('2017-04-01', 'month') % 12
 
 - 깃허브 : [github.com/kdevkr](https://github.com/kdevkr)
 - 이메일 : <a href="mailto:kdevkr@gmail.com">kdevkr@gmail.com</a>
+
+<Comment />
