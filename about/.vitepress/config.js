@@ -71,7 +71,7 @@ export default {
                 items: [
                     { text: "Experience", link: "/experience" },
                     { text: "Skills", link: "/skills" },
-                    { text: "Opensource", link: "/opensource" },
+                    { text: "Activities", link: "/activities" },
                     { text: "Troubleshooting", link: "/troubleshooting" },
                 ],
             },

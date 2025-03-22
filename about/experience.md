@@ -1,6 +1,7 @@
 # Experience
 
 ## 경력
+
 - 이아이피그리드: 2022년 8월 입사 (물적분할)
 - 아이온커뮤니케이션즈: 2017년 4월 입사, 2022년 8월 퇴사
 
@@ -27,6 +28,7 @@
 - 대량 이메일 발송을 위한 병렬 처리 경험
 
 #### 🌏 가상화 발전소 에너지 플랫폼 개발 <small>2017.04 ~ 2022.08</small>
+
 - VPP 솔루션 신규 기능 개발 및 운영 및 유지보수
 - 솔루션 관리를 위한 백오피스 어드민 개발
 - ES 로그 기반 알림 인터페이스 설계 및 구현
@@ -40,6 +42,7 @@
 - 프론트 Webpack5 마이그레이션 수행 경험
 
 #### 🌏 V2G 한영 과제 실증 시스템 개발 <small>2020.07 ~ 2021.07</small>
+
 - OBD를 통해 수집된 EV 데이터 MQTT 프로토콜 연계 수행
 - 게이미피케이션 참여 유도를 위한 카카오 알림톡 메시지 발송 구현
 - 제주 JoyEV API를 통한 충전소 정보 연동 경험
@@ -48,23 +51,9 @@
 - 전기차 데이터 수집 및 외부 인터페이스 연동 경험
 
 #### 🌏 한국전력공사 전력연구원 마이크로그리드 통합 운영 시스템 개발 <small>2018.08 ~ 2019.10</small>
+
 - 전남대 EPA Agent 통신 연계를 위한 OAuth API 개발
 - OpenADR 프로토콜을 활용한 EPA 시스템 발전/감축 이벤트 연계 로직 구현
 - 외부 통신이 되지 않는 온프레미스 환경 서버 구성 및 배포 경험
 - 부서 간 협력 프로젝트 수행 경험
 - 리눅스 서버 애플리케이션 재기동 쉘 스크립트 작성
-
-
-## 개인 활동
-
-⭐️ OKKY [초보가 이해하는 스프링 시큐리티](https://okky.kr/articles/382738) 공유  
-⭐️ 인텔리제이 [Optimize imports 자동화](https://okky.kr/articles/1134690) 팁 공유  
-⭐️ [AWS Beanstalk Java SE 플랫폼을 활용한 애플리케이션 배포 자동화](https://kdevkr.github.io/deploy-application-to-the-aws-elastic-beanstalk-java-se-platform-enviroment/) 구성  
-⭐️ [SonarQube 및 Github Actions를 활용한 정적 분석](https://kdevkr.github.io/static-analysis-performed-by-sonarqube-and-github-action/) 수행  
-⭐️ Apache Commons Pool를 활용한 [KDB+ 커넥션 풀](https://kdevkr.github.io/kdb-connection-pool/) 구현  
-⭐️ Uptime Kuma의 Synthetic Monitoring를 활용한 트러블 슈팅  
-
-::: tip 개인 블로그
-[kdevkr.github.io](https://kdevkr.github.io/)를 통해 경험하는 것들을 정리해서 기록하고 있어요!
-:::
-
