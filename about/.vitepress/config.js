@@ -53,7 +53,7 @@ export default {
             lang: "ko-KR",
         },
         en: {
-            label: "Enlglish",
+            label: "English",
             lang: "en-US",
         },
     },
@@ -63,18 +63,16 @@ export default {
         logo: "./favicon/favicon.ico",
         nav: [
             { text: "Experience", link: "/experience" },
-            { text: "Skills", link: "/skills" },
             { text: "Blog", link: "https://kdev.ing" },
             { text: "Github", link: "https://github.com/kdevkr" },
         ],
         sidebar: [
             {
                 items: [
-                    { text: "Introduction", link: "/" },
                     { text: "Experience", link: "/experience" },
                     { text: "Skills", link: "/skills" },
                     { text: "Opensource", link: "/opensource" },
-                    // { text: "Troubleshooting", link: "/troubleshooting" },
+                    { text: "Troubleshooting", link: "/troubleshooting" },
                 ],
             },
         ],
