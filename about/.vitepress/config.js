@@ -51,34 +51,56 @@ export default {
         root: {
             label: "한국어",
             lang: "ko-KR",
+            title: "Mambo",
+            description: "개발자 Mambo의 포트폴리오",
+            themeConfig: {
+                logo: "./favicon/favicon.ico",
+                nav: [
+                    { text: "경험", link: "/experience" },
+                    { text: "블로그", link: "https://kdev.ing" },
+                    { text: "Github", link: "https://github.com/kdevkr" },
+                ],
+                sidebar: [
+                    {
+                        items: [
+                            { text: "경험", link: "/experience" },
+                            { text: "기술", link: "/skills" },
+                            { text: "활동", link: "/activities" },
+                            { text: "문제해결", link: "/troubleshooting" },
+                        ],
+                    },
+                ],
+                footer: {
+                    copyright: 'Copyright © 2023-2025 <a href="https://github.com/kdevkr">Mambo<a/>',
+                },
+            },
         },
         en: {
             label: "English",
             lang: "en-US",
-        },
-    },
-
-    // Theme related configurations.
-    themeConfig: {
-        logo: "./favicon/favicon.ico",
-        nav: [
-            { text: "Experience", link: "/experience" },
-            { text: "Blog", link: "https://kdev.ing" },
-            { text: "Github", link: "https://github.com/kdevkr" },
-        ],
-        sidebar: [
-            {
-                items: [
-                    { text: "Experience", link: "/experience" },
-                    { text: "Skills", link: "/skills" },
-                    { text: "Activities", link: "/activities" },
-                    { text: "Troubleshooting", link: "/troubleshooting" },
+            title: "Mambo",
+            description: "Developer Mambo's Portfolio",
+            themeConfig: {
+                logo: "./favicon/favicon.ico",
+                nav: [
+                    { text: "Experience", link: "/en/experience" },
+                    { text: "Blog", link: "https://kdev.ing" },
+                    { text: "Github", link: "https://github.com/kdevkr" },
                 ],
+                sidebar: [
+                    {
+                        items: [
+                            { text: "Experience", link: "/en/experience" },
+                            { text: "Skills", link: "/en/skills" },
+                            { text: "Activities", link: "/en/activities" },
+                            { text: "Troubleshooting", link: "/en/troubleshooting" },
+                        ],
+                    },
+                ],
+                footer: {
+                    copyright: 'Copyright © 2023-2025 <a href="https://github.com/kdevkr">Mambo<a/>',
+                },
             },
-        ],
-        footer: {
-            copyright:
-                'Copyright © 2023 <a href="https://github.com/kdevkr">Mambo<a/>',
         },
     },
 
