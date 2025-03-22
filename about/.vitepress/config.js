@@ -73,7 +73,7 @@ export default {
                     { text: "Introduction", link: "/" },
                     { text: "Experience", link: "/experience" },
                     { text: "Skills", link: "/skills" },
-                    // { text: "Opensource", link: "/opensource" },
+                    { text: "Opensource", link: "/opensource" },
                     // { text: "Troubleshooting", link: "/troubleshooting" },
                 ],
             },
